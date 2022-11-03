@@ -10,8 +10,7 @@
 /// Kattis calls main function to run your solution
 int main()
 {
-    int num, top_num, total = 0;
-    char text[15];
+    int num, top_num, *numbers,  total = 0;
     
     /**
      * Assuming a numeric or character format type:
@@ -26,8 +25,7 @@ int main()
      */
     scanf("%d", &num);                // parse input as integer
     int i, k;
-    //numbers = malloc(num * sizeof(int));
-    int numbers[num];
+    numbers = malloc(num * sizeof(int));
     for (i=0; i<num; i++){
         scanf("%d", &numbers[i]);
     }
